@@ -1,0 +1,17 @@
+OFFLINE MAP PLACEHOLDER
+
+This file indicates where the offline_map.jpg should be placed.
+
+To create the offline map image:
+1. Take a screenshot of the map at your default location
+2. Save it as offline_map.jpg in this directory (frontend/public/)
+3. Recommended size: 512x512 or 1024x1024 pixels
+4. Format: JPEG
+
+Alternatively, you can use a simple grid pattern image for testing.
+
+The map component will automatically use this image when:
+- Tile server is unreachable
+- User preference "prefer_offline_map" is enabled
+- Network is offline
+

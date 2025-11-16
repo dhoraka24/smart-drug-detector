@@ -1,0 +1,282 @@
+═══════════════════════════════════════════════════════════════
+  SMART DRUG DETECTOR - TECHNICAL STACK & FEATURES
+═══════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────┐
+│ FRONTEND TECHNICAL STACK                                    │
+└─────────────────────────────────────────────────────────────┘
+
+Core Framework:
+  • React 18.2.0 - UI Library
+  • Vite 5.0.8 - Build Tool & Dev Server
+
+Styling & UI:
+  • Tailwind CSS 3.3.6 - Utility-first CSS Framework
+  • Framer Motion 10.18.0 - Animation Library
+  • Lucide React 0.294.0 - Icon Library
+
+State Management & Routing:
+  • Zustand 4.4.7 - Lightweight State Management
+  • React Router DOM 6.20.0 - Client-side Routing
+
+Data Visualization:
+  • Chart.js 4.4.1 - Graph Library
+  • React Chart.js 2 5.2.0 - React Wrapper
+  • Leaflet 1.9.4 - Interactive Maps
+  • React Leaflet 4.2.1 - React Wrapper
+
+HTTP & Real-time:
+  • Axios 1.6.2 - HTTP Client
+  • WebSocket API - Real-time Updates
+
+Utilities:
+  • React Hot Toast 2.6.0 - Notifications
+  • Date-fns 3.0.0 - Date Formatting
+  • React Syntax Highlighter 15.6.6 - Code Display
+
+───────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────┐
+│ BACKEND TECHNICAL STACK                                     │
+└─────────────────────────────────────────────────────────────┘
+
+Core Framework:
+  • FastAPI 0.104.1 - Modern Python Web Framework
+  • Uvicorn 0.24.0 - ASGI Server
+
+Database & ORM:
+  • SQLModel 0.0.16+ - SQL Database ORM
+  • SQLite - Lightweight Database
+
+Authentication & Security:
+  • Python-JOSE 3.3.0+ - JWT Token Handling
+  • Bcrypt 4.0.0+ - Password Hashing
+  • Email Validator 2.1.0+ - Email Validation
+
+AI Integration:
+  • OpenAI 1.12.0+ - GPT API for Alert Analysis
+
+Real-time Communication:
+  • WebSockets 12.0 - Real-time Data Streaming
+
+Utilities:
+  • Python-dotenv 1.0.0+ - Environment Variables
+  • Python-multipart 0.0.6 - Form Data Handling
+  • Pytest 7.4.0+ - Testing Framework
+
+───────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────┐
+│ FRONTEND FEATURES                                           │
+└─────────────────────────────────────────────────────────────┘
+
+🔐 Authentication & User Management:
+  ✓ User Login & Signup
+  ✓ JWT Token-based Authentication
+  ✓ Protected Routes
+  ✓ Profile Management
+  ✓ Password Change
+
+📊 Dashboard:
+  ✓ Real-time Status Cards (SAFE/WARNING/HIGH)
+  ✓ Animated Severity Indicators
+  ✓ Device Health Monitoring
+  ✓ GPS Lock Status
+  ✓ Mini Trend Graphs (MQ3, MQ135, Temperature)
+  ✓ AI Insights Display
+  ✓ Last Update Time Tracking
+
+🗺️ Real-Time Map:
+  ✓ Interactive Leaflet Map
+  ✓ Color-coded Alert Markers (Green/Yellow/Red)
+  ✓ Device GPS Trails (Last 10 points)
+  ✓ Replay Mode with Timeline
+  ✓ Play/Pause Controls
+  ✓ Speed Control
+  ✓ Auto-center on Alerts
+  ✓ Export to CSV
+
+🚨 Alerts Management:
+  ✓ Alert Table with Filters
+  ✓ Severity Filtering (SAFE/WARNING/HIGH)
+  ✓ Date Range Filter
+  ✓ Device ID Filter
+  ✓ Modal View with Full Details:
+    - Short Message
+    - AI Explanation
+    - Recommended Action
+    - Confidence Score
+    - GPS Map Preview
+    - Timestamp
+
+⚙️ Settings:
+  ✓ Profile Settings (Name, Email)
+  ✓ User Preferences:
+    - Dark/Light Theme Toggle
+    - Map Zoom Level
+    - Animation Toggle
+    - Notification Preferences
+  ✓ Device Settings:
+    - MQ3 Threshold Configuration
+    - Warning Notification Toggle
+    - Connected Devices List
+    - Online/Offline Status
+
+🔧 Hardware & Code:
+  ✓ Wiring Diagram Display
+  ✓ ESP32 INO Code Viewer
+  ✓ Syntax Highlighting
+  ✓ Copy Code Functionality
+
+📋 Data Management:
+  ✓ Duplicate Telemetry Detection
+  ✓ Merge Duplicates
+  ✓ Delete Duplicates
+  ✓ Data Export (CSV)
+
+🎨 UI/UX Features:
+  ✓ Dark/Light Theme Support
+  ✓ Smooth Page Transitions
+  ✓ Glassmorphism Design
+  ✓ Responsive Layout (Desktop + Mobile)
+  ✓ Real-time WebSocket Updates
+  ✓ Toast Notifications
+  ✓ Loading States
+  ✓ Error Handling
+
+───────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────┐
+│ BACKEND FEATURES                                            │
+└─────────────────────────────────────────────────────────────┘
+
+🔐 Authentication & Authorization:
+  ✓ JWT Token Generation & Validation
+  ✓ Password Hashing (Bcrypt)
+  ✓ Role-based Access Control (Admin/User)
+  ✓ Rate Limiting (5 attempts per 15 min)
+  ✓ Secure API Key Authentication for Devices
+
+📡 API Endpoints:
+  ✓ POST /api/v1/auth/signup - User Registration
+  ✓ POST /api/v1/auth/login - User Login
+  ✓ GET /api/v1/auth/me - Current User Info
+  ✓ GET /api/v1/profile - Get User Profile
+  ✓ PUT /api/v1/profile - Update Profile
+  ✓ POST /api/v1/profile/change-password - Change Password
+  ✓ POST /api/v1/telemetry - Receive Sensor Data
+  ✓ GET /api/v1/telemetry - Get Telemetry History
+  ✓ GET /api/v1/alerts - Get Alerts with Filters
+  ✓ GET /api/v1/alerts/export - Export Alerts CSV
+  ✓ GET /api/v1/alerts/history - Alert History with Aggregation
+  ✓ GET /api/v1/device-settings/{device_id} - Get Settings
+  ✓ POST /api/v1/device-settings/{device_id} - Update Settings (Admin)
+  ✓ GET /api/v1/duplicates - Get Duplicate Telemetry
+  ✓ POST /api/v1/duplicates/merge - Merge Duplicates
+  ✓ DELETE /api/v1/duplicates/{id} - Delete Duplicate
+  ✓ GET /api/v1/preferences - Get User Preferences
+  ✓ PUT /api/v1/preferences - Update Preferences
+  ✓ GET /api/v1/health - Health Check
+  ✓ GET /api/v1/maps/offline-info - Map Cache Info
+
+🤖 AI Integration:
+  ✓ OpenAI GPT Integration
+  ✓ Automatic Alert Analysis
+  ✓ Detailed Explanations
+  ✓ Recommended Actions
+  ✓ Confidence Scoring
+  ✓ Fallback Responses
+
+🔍 Data Processing:
+  ✓ Duplicate Detection Algorithm
+  ✓ Debounce Logic (Prevent Alert Spam)
+  ✓ Severity Calculation (MQ3-based)
+  ✓ GPS Coordinate Validation
+  ✓ Data Aggregation & Bucketing
+  ✓ Historical Data Analysis
+
+💾 Database Features:
+  ✓ SQLite Database
+  ✓ SQLModel ORM
+  ✓ Automatic Schema Migration
+  ✓ Data Relationships
+  ✓ Query Optimization
+  ✓ Transaction Support
+
+🌐 Real-time Communication:
+  ✓ WebSocket Server (ws://localhost:8000/ws/alerts)
+  ✓ Connection Management
+  ✓ Broadcast to All Clients
+  ✓ Automatic Reconnection
+  ✓ Ping/Pong Heartbeat
+
+🔒 Security Features:
+  ✓ CORS Configuration
+  ✓ Input Validation
+  ✓ SQL Injection Prevention
+  ✓ XSS Protection
+  ✓ Secure Password Storage
+  ✓ Token Expiration
+  ✓ API Key Authentication
+
+📊 Data Export:
+  ✓ CSV Export for Alerts
+  ✓ Filtered Data Export
+  ✓ GPS-only Data Export
+  ✓ Historical Data Export
+
+───────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────┐
+│ HARDWARE INTEGRATION                                        │
+└─────────────────────────────────────────────────────────────┘
+
+Microcontroller:
+  • ESP32 Development Board
+
+Sensors:
+  • MQ3 Gas Sensor (Alcohol/Drug Vapor Detection)
+  • MQ135 Gas Sensor (Air Quality)
+  • DHT22 (Temperature & Humidity)
+  • NEO-6M GPS Module (Optional)
+
+Communication:
+  • WiFi Connectivity
+  • HTTP POST to Backend
+  • Device API Key Authentication
+  • JSON Data Transmission
+
+───────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────┐
+│ SYSTEM ARCHITECTURE                                         │
+└─────────────────────────────────────────────────────────────┘
+
+ESP32 Device
+    ↓ (HTTP POST + Device API Key)
+FastAPI Backend
+    ↓ (SQLModel ORM)
+SQLite Database
+    ↓ (OpenAI API)
+AI Analysis
+    ↓ (WebSocket)
+React Frontend (Real-time Updates)
+
+───────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────┐
+│ KEY TECHNOLOGIES SUMMARY                                    │
+└─────────────────────────────────────────────────────────────┘
+
+Frontend: React + Vite + Tailwind CSS + Framer Motion
+Backend: FastAPI + SQLModel + SQLite
+Authentication: JWT + Bcrypt
+AI: OpenAI GPT API
+Maps: Leaflet + OpenStreetMap
+Charts: Chart.js
+State: Zustand
+Real-time: WebSocket
+Hardware: ESP32 + MQ3/MQ135 Sensors
+
+═══════════════════════════════════════════════════════════════
+
